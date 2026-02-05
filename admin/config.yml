@@ -1,0 +1,49 @@
+backend:
+  name: github
+  repo: profhenriqueramalho/GAPEG
+  branch: main
+
+media_folder: "assets/img"
+public_folder: "/assets/img"
+
+collections:
+  - name: "paginas"
+    label: "Páginas do site"
+    files:
+      - label: "Página inicial"
+        name: "home"
+        file: "index.html"
+        fields:
+          - { label: "Título principal", name: "title", widget: "string" }
+          - { label: "Texto de apresentação", name: "description", widget: "text" }
+
+      - label: "Quem somos"
+        name: "quem_somos"
+        file: "quem-somos.html"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Texto", name: "content", widget: "markdown" }
+
+      - label: "Equipe"
+        name: "equipe"
+        file: "equipe.html"
+        fields:
+          - { label: "Conteúdo", name: "content", widget: "markdown" }
+
+      - label: "Publicações"
+        name: "publicacoes"
+        file: "publicacoes.html"
+        fields:
+          - { label: "Conteúdo", name: "content", widget: "markdown" }
+
+      - label: "Aulas"
+        name: "aulas"
+        file: "aulas.html"
+        fields:
+          - { label: "Conteúdo", name: "content", widget: "markdown" }
+
+      - label: "Contato"
+        name: "contato"
+        file: "contato.html"
+        fields:
+          - { label: "Conteúdo", name: "content", widget: "markdown" }
