@@ -1,8 +1,6 @@
 backend:
-  name: github
-  repo: profhenriqueramalho/GAPEG
-  branch: main
-auth_endpoint: https://auth.decapcms.org/auth
+  name: test-repo
+
 
 media_folder: "assets/img"
 public_folder: "/assets/img"
