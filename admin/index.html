@@ -1,11 +1,39 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Admin | GAPEG</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://unpkg.com/decap-cms@3.0.0/dist/decap-cms.js"></script>
+
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; padding:18px; line-height:1.35}
+    code,pre{background:#111;color:#0f0;padding:10px;border-radius:10px;display:block;white-space:pre-wrap}
+    .ok{padding:10px;border-radius:10px;background:#f2f2f2}
+  </style>
+
+  <script>
+    window.addEventListener("error", (e) => {
+      const msg = `ERRO JS: ${e.message}\nArquivo: ${e.filename}\nLinha: ${e.lineno}:${e.colno}`;
+      document.body.insertAdjacentHTML("beforeend", `<pre>${msg}</pre>`);
+    });
+  </script>
+
+  <!-- CDN menos bloqueado que unpkg -->
+  <script src="https://cdn.jsdelivr.net/npm/decap-cms@3/dist/decap-cms.js"></script>
 </head>
 <body>
+  <h1>Admin GAPEG</h1>
+  <div class="ok">
+    Se você está vendo este texto, o arquivo <b>/admin/index.html</b> carregou corretamente.
+    Se o CMS não aparecer, vai surgir um bloco verde com o erro.
+  </div>
+
+  <p style="margin-top:12px">
+    Dica: se nada aparecer além deste texto, teste em janela anônima e desative AdBlock/Translate para <b>pages.dev</b>.
+  </p>
+
+  <noscript>
+    <pre>JavaScript está desativado. Ative para o CMS funcionar.</pre>
+  </noscript>
 </body>
 </html>
