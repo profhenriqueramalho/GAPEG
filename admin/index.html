@@ -4,7 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Admin | GAPEG</title>
-  <script src="https://cdn.jsdelivr.net/npm/decap-cms@3/dist/decap-cms.js"></script>
 </head>
-<body></body>
+<body style="font-family: system-ui, Arial; padding: 16px;">
+  <h1>Admin GAPEG</h1>
+  <p>Se você está vendo esta mensagem, o HTML carregou.</p>
+
+  <script>
+    window.addEventListener('error', (e) => {
+      document.body.insertAdjacentHTML('beforeend',
+        `<pre style="white-space:pre-wrap;background:#111;color:#0f0;padding:12px;border-radius:8px;">ERRO: ${e.message}\nArquivo: ${e.filename}\nLinha: ${e.lineno}</pre>`
+      );
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/decap-cms@3/dist/decap-cms.js"></script>
+</body>
 </html>
