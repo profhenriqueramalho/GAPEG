@@ -30,27 +30,7 @@
     </div>
 
     <div class="card">
-      <p class="lead" style="margin:0">
-        Coloque aqui os artigos, livros, capítulos, resumos e relatórios técnicos. Formato sugerido: ABNT ou APA, sempre com DOI quando houver.
-      </p>
-      <div class="hr"></div>
-
-      <h3 style="margin:0 0 8px">Artigos (exemplos)</h3>
-      <ul class="list small">
-        <li>Autor(es). (Ano). Título. Periódico. DOI/link.</li>
-        <li>Autor(es). (Ano). Título. Periódico. DOI/link.</li>
-        <li>Autor(es). (Ano). Título. Periódico. DOI/link.</li>
-      </ul>
-
-      <h3 style="margin:14px 0 8px">Livros e capítulos</h3>
-      <ul class="list small">
-        <li>Autor(es). (Ano). Título do livro/capítulo. Editora. Link.</li>
-      </ul>
-
-      <div class="hr"></div>
-      <p class="small">
-        Dica: se você quiser automatizar isso depois, dá para puxar do ORCID/Google Scholar via script, mas aí já é um passo mais avançado.
-      </p>
+      {{ content }}
     </div>
   </section>
 
@@ -60,6 +40,8 @@
 </main>
 
 <script src="assets/js/main.js"></script>
-<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
