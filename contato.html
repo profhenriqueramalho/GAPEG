@@ -30,11 +30,14 @@
     </div>
 
     <div class="grid-3">
+      <!-- Formulário fixo -->
       <div class="card" style="grid-column: span 2">
         <h3 style="margin:0 0 8px">Mensagem rápida</h3>
-        <p class="small">Este formulário não envia sozinho (HTML puro). Você pode usar Google Forms ou Formspree depois.</p>
+        <p class="small">
+          Este formulário não envia sozinho (HTML puro). Você pode usar Google Forms ou Formspree depois.
+        </p>
 
-        <form onsubmit="alert('Para enviar de verdade, conecte um serviço como Google Forms/Formspree.'); return false;">
+        <form onsubmit="alert('Para enviar de verdade, conecte um serviço como Google Forms ou Formspree.'); return false;">
           <div class="form-row">
             <div>
               <label class="small" for="nome">Nome</label>
@@ -57,20 +60,9 @@
         </form>
       </div>
 
+      <!-- Conteúdo editável pelo CMS -->
       <aside class="card">
-        <h3 style="margin:0 0 8px">Contato institucional</h3>
-        <p class="small">
-          UFOPA • Santarém, PA<br/>
-          E-mail: (a definir)<br/>
-          Telefone: (a definir)
-        </p>
-        <div class="hr"></div>
-        <p class="small">
-          Redes sociais:<br/>
-          Instagram: (link)<br/>
-          YouTube: (link)<br/>
-          GitHub: (link)
-        </p>
+        {{ content }}
       </aside>
     </div>
   </section>
@@ -81,6 +73,8 @@
 </main>
 
 <script src="assets/js/main.js"></script>
-<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
