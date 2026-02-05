@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publicações | GAPEG</title>
+  <meta name="description" content="Artigos, livros e produção científica do GAPEG." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="logo-dot"></span><span>GAPEG</span></a>
+    <nav class="menu" aria-label="Menu principal">
+      <a href="quem-somos.html">Quem somos</a>
+      <a href="equipe.html">Equipe</a>
+      <a href="publicacoes.html">Publicações</a>
+      <a href="aulas.html">Aulas</a>
+      <a class="cta" href="contato.html">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="section">
+    <div class="section-title">
+      <h2>Publicações</h2>
+      <p>Produção científica e técnica</p>
+    </div>
+
+    <div class="card">
+      <p class="lead" style="margin:0">
+        Coloque aqui os artigos, livros, capítulos, resumos e relatórios técnicos. Formato sugerido: ABNT ou APA, sempre com DOI quando houver.
+      </p>
+      <div class="hr"></div>
+
+      <h3 style="margin:0 0 8px">Artigos (exemplos)</h3>
+      <ul class="list small">
+        <li>Autor(es). (Ano). Título. Periódico. DOI/link.</li>
+        <li>Autor(es). (Ano). Título. Periódico. DOI/link.</li>
+        <li>Autor(es). (Ano). Título. Periódico. DOI/link.</li>
+      </ul>
+
+      <h3 style="margin:14px 0 8px">Livros e capítulos</h3>
+      <ul class="list small">
+        <li>Autor(es). (Ano). Título do livro/capítulo. Editora. Link.</li>
+      </ul>
+
+      <div class="hr"></div>
+      <p class="small">
+        Dica: se você quiser automatizar isso depois, dá para puxar do ORCID/Google Scholar via script, mas aí já é um passo mais avançado.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>© <span id="y"></span> GAPEG</div>
+  </footer>
+</main>
+
+<script src="assets/js/main.js"></script>
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
