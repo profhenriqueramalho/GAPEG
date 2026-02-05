@@ -1,0 +1,183 @@
+:root{
+  --green:#0E5A22;
+  --yellow:#F9C123;
+  --brown:#8D5B23;
+  --beige:#F9F4CC;
+
+  --text:#102015;
+  --muted:#47614e;
+  --card:#ffffff;
+  --shadow: 0 8px 24px rgba(0,0,0,.08);
+  --radius: 18px;
+  --max: 1100px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background: linear-gradient(180deg, var(--beige), #fff);
+  line-height:1.6;
+}
+
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.9}
+img{max-width:100%;display:block}
+
+.container{max-width:var(--max);margin:0 auto;padding:24px}
+.navbar{
+  position:sticky; top:0; z-index:50;
+  background: rgba(249,244,204,.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(14,90,34,.12);
+}
+.nav-inner{
+  max-width:var(--max); margin:0 auto; padding:14px 24px;
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+}
+.brand{
+  display:flex; align-items:center; gap:12px; font-weight:800;
+  letter-spacing:.2px;
+}
+.logo-dot{
+  width:14px; height:14px; border-radius:999px;
+  background: var(--green);
+  box-shadow: 0 0 0 4px rgba(14,90,34,.15);
+}
+.menu{
+  display:flex; gap:14px; flex-wrap:wrap; align-items:center; justify-content:flex-end;
+}
+.menu a{
+  padding:8px 10px; border-radius:999px;
+  color:var(--muted);
+}
+.menu a.active{
+  background: rgba(14,90,34,.10);
+  color: var(--green);
+  font-weight:700;
+}
+.menu a.cta{
+  background: var(--green);
+  color: #fff;
+  font-weight:700;
+}
+.menu a.cta:hover{opacity:.95}
+
+.hero{
+  padding:46px 0 18px;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap:18px;
+}
+@media (max-width: 860px){
+  .hero-grid{grid-template-columns:1fr}
+}
+.hero-card{
+  background: rgba(255,255,255,.78);
+  border: 1px solid rgba(14,90,34,.12);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 26px;
+}
+.kicker{
+  display:inline-flex; gap:10px; align-items:center;
+  padding:6px 12px; border-radius:999px;
+  background: rgba(249,193,35,.22);
+  color: var(--brown);
+  font-weight:700;
+  font-size:14px;
+}
+h1{
+  margin:14px 0 10px;
+  line-height:1.15;
+  font-size: 40px;
+  letter-spacing:-.6px;
+}
+@media (max-width: 520px){
+  h1{font-size:32px}
+}
+.lead{color:var(--muted); font-size:17px; margin:0 0 14px}
+
+.hero-actions{
+  display:flex; gap:12px; flex-wrap:wrap; margin-top:14px;
+}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:10px;
+  padding:10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(14,90,34,.20);
+  background: #fff;
+  font-weight:700;
+}
+.btn.primary{
+  background: var(--green);
+  color:#fff;
+  border-color: transparent;
+}
+.btn:hover{transform: translateY(-1px); transition:.15s}
+
+.card{
+  background: var(--card);
+  border: 1px solid rgba(14,90,34,.12);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.section{padding:18px 0 34px}
+.section-title{
+  display:flex; align-items:flex-end; justify-content:space-between; gap:16px;
+  margin: 0 0 12px;
+}
+.section-title h2{margin:0; font-size:22px}
+.section-title p{margin:0; color:var(--muted)}
+
+.grid-3{
+  display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;
+}
+@media (max-width: 860px){ .grid-3{grid-template-columns:1fr} }
+
+.tag{
+  display:inline-flex;
+  padding:4px 10px;
+  border-radius:999px;
+  background: rgba(14,90,34,.08);
+  color: var(--green);
+  font-weight:700;
+  font-size:13px;
+}
+
+.footer{
+  margin-top: 28px;
+  padding: 22px 0;
+  border-top: 1px solid rgba(14,90,34,.12);
+  color: var(--muted);
+  font-size: 14px;
+}
+.footer a{color: var(--green); font-weight:700}
+.small{font-size:13px;color:var(--muted)}
+.hr{height:1px;background:rgba(14,90,34,.12);margin:14px 0}
+.list{padding-left:18px;margin:10px 0}
+.notice{
+  border-left: 4px solid var(--yellow);
+  padding: 12px 14px;
+  background: rgba(249,193,35,.12);
+  border-radius: 12px;
+  color: #4b3a12;
+}
+.input, textarea{
+  width:100%;
+  padding: 11px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(14,90,34,.18);
+  outline: none;
+  font-size: 15px;
+  background: rgba(255,255,255,.9);
+}
+textarea{min-height:120px;resize:vertical}
+.form-row{display:grid;grid-template-columns:1fr 1fr; gap:12px}
+@media (max-width: 680px){ .form-row{grid-template-columns:1fr} }
